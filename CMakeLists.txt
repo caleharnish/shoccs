@@ -34,9 +34,9 @@ find_package(Boost REQUIRED) # for header only mp11
 
 find_package(MKL REQUIRED)
 # make MKL a target
-add_library(MKL INTERFACE IMPORTED)
-target_include_directories(MKL INTERFACE ${MKL_INCLUDE_DIR})
-target_link_libraries(MKL INTERFACE ${MKL_LIBRARIES})
+add_library(MKL::MKL INTERFACE IMPORTED)
+target_include_directories(MKL::MKL INTERFACE ${MKL_INCLUDE_DIR})
+target_link_libraries(MKL::MKL INTERFACE ${MKL_LIBRARIES})
 
 include(GNUInstallDirs)
 
