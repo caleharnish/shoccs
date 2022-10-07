@@ -197,8 +197,6 @@ else()
     if (FORCE_BUILD_32BITS)
         list(APPEND MKL_LINK_TOOL_COMMAND "--interface=cdecl")
         set(MKL_USE_interface "cdecl" CACHE STRING "disabled by FORCE_BUILD_32BITS" FORCE)
-    else()
-        list(APPEND MKL_LINK_TOOL_COMMAND "--interface=${MKL_USE_interface}")
     endif()
 
     if (MKL_USE_parallel)
