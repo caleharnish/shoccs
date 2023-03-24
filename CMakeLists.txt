@@ -31,6 +31,7 @@ if (BUILD_TESTING)
   find_package(Catch2 3 REQUIRED)
 endif()
 find_package(Boost REQUIRED) # for header only mp11
+find_package(lapackpp REQUIRED)
 
 find_package(MKL REQUIRED)
 # make MKL a target
